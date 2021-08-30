@@ -39,7 +39,8 @@ body{
 /*TOPO*/
 header.topo{
 	display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+	width: 100%;
 		
 	}
 
@@ -63,91 +64,59 @@ header{
 	font-size: 30px;
 }
 
-div.pg-home{
+.pg-home ul{
 	display: flex;
-	justify-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+	max-width: 500px;
+    list-style: none;
+    margin: 40px auto;
 	
+}
+
+.pg-home ul li {
+	width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	margin-bottom:40px;
+}
+.pg-home ul li figure img{
+	width: 186px;
+	
+}
+
+.pg-home ul li:last-child figure img{
+	transform:scale(0.5);
+	
+}
+
+
+.pg-home ul li h3{
+	text-align: center;	
+	margin-top:20px;
+}
+
+@media(min-width:858px){
+
+	header.topo{
+	display: flex;
+    justify-content: flex-start;
+		
 	}
 
-ul{
-	margin-top: 50px;
-	list-style: none;
-	display: flex;
-	flex-wrap: wrap;
-	width: var(--sizedad);
-	box-sizing: border-box;
-	justify-content: space-around;
+	.pg-home ul{
+		flex-wrap: nowrap;
+		max-width: 858px;
+		justify-content: space-between;
+	}
+
+	.pg-home ul li {
+		width: auto;
+	}
 
 }
 
-li{
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	justify-content: space-between;
-	flex-basis: var(--sizeson);
-}
 
-
-
-.addPerfil figure{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-basis: 100%;
-}
-
-
-.addPerfil img{
-width:50%;
-
-}
-
-img{
-	width: 100%;
-}
-
-
-/*RODAPÉ*/
-
-footer{
-
-}
-
-button{
-	display: flex;
-	margin: auto;
-	background-color: var(--bodycolor);
-	padding: 10px;
-	border:solid white;
-	color: white;
-	margin-top: 30px;
-}
-
-
-
-
-@media(max-width:768px){
-
-header.topo{
-	display: flex;
-	justify-content: center;
-			
-}
-
-header{
-	font-size: 15px;
-}
-
-
-ul{
-	width: 500px;
-
-}
-
-li{
-	margin-bottom: 20px;
-}
-
-
-}
